@@ -152,7 +152,7 @@ void COM1(char* path)
 
 		for (int i = 0; i < AmountOfBlocks; i++)
 		{
-			message.copy(buffer, bufferSize, i * bufferSize);
+			message.copy(buffer, bufferSize, i*bufferSize);
 			if (!WriteFile(Receiver_COM1, buffer, bufferSize, &AmountOfBytes, NULL))
 				cout << "Error.";
 		}
@@ -169,7 +169,7 @@ void COM1(char* path)
 
 void COM2()
 {
-	HANDLE Receiver_COM2;
+	HANDLE Receiver_COM2;		
 	HANDLE Semaphores[3];
 
 	char buffer[20];
